@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:dg="clr-namespace:Xamarin.Forms.DataGrid;assembly=Xamarin.Forms.DataGrid" 
+             xmlns:conv="clr-namespace:DataGridSample.Views.Converters;assembly=DataGridSample"
+             x:Class="XFTest.Views.DataGridPage"
+             Title="DataGridPage">
+    <dg:DataGrid ItemsSource="{Binding ListViewItems}" 
+                 SelectionEnabled="True" 
+                 ItemSelected="Handle_ItemSelected"
+                 RowHeight="70" HeaderHeight="50" BorderColor="#CCCCCC" 
+                 HeaderBackground="#E0E6F8" >
+        <dg:DataGrid.HeaderFontSize>
+            <OnIdiom x:TypeArguments="x:Double">
+                <OnIdiom.Tablet>15</OnIdiom.Tablet>
+                <OnIdiom.Phone>13</OnIdiom.Phone>
+            </OnIdiom>
+        </dg:DataGrid.HeaderFontSize>
+        <dg:DataGrid.Columns>
+            <dg:DataGridColumn Title="No1" PropertyName="No1" />
+            <dg:DataGridColumn Title="Date1" PropertyName="Date1" />
+        </dg:DataGrid.Columns>
+    </dg:DataGrid>
+</ContentPage>

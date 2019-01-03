@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:XFTest" 
+             x:Class="XFTest.Views.MainPage" 
+             Title="MainPage">
+    <ListView ItemsSource="{Binding Path=ListViewItems}" 
+              ItemTapped="Handle_ItemTapped" 
+              HasUnevenRows="true">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout HorizontalOptions="Fill" VerticalOptions="Center" Margin="8">
+                        <Label Text="{Binding No1}" FontAttributes="Bold" TextColor="Red"/>
+                        <Label Text="{Binding Date1}"/>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
